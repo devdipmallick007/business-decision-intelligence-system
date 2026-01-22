@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+
+# Data artifacts
+data/raw/
+data/cleaned/
+
+# IDE
+.vscode/
+.idea/
