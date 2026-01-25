@@ -38,10 +38,3 @@ def get_engine():
         logger.exception("Failed to create database engine")
         raise
 
-# ===== Example Usage =====
-if __name__ == "__main__":
-    try:
-        engine = get_engine()
-        logger.info("Engine test completed successfully")
-    except Exception as e:
-        logger.error(f"Engine test failed: {e}")

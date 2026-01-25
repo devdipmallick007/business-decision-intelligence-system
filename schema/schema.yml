@@ -1,0 +1,108 @@
+version: 1.0
+
+tables:
+  sales:
+    primary_key:
+      - Order_Number
+      - Line_Item
+    required_columns:
+      - Order_Number
+      - Line_Item
+      - Order_Date
+      - Delivery_Date
+      - CustomerKey
+      - StoreKey
+      - ProductKey
+      - Quantity
+      - Currency_Code
+    dtypes:
+      Order Number: int
+      Line Item: int
+      Order Date: date
+      Delivery Date: date
+      CustomerKey: int
+      StoreKey: int
+      ProductKey: int
+      Quantity: int
+      Currency Code: object
+
+  customers:
+    primary_key:
+      - CustomerKey
+    required_columns:
+      - CustomerKey
+      - Gender
+      - Name
+      - City
+      - State_Code
+      - State
+      - Zip_Code
+      - Country
+      - Continent
+      - Birthday
+    dtypes:
+      CustomerKey: int
+      Gender: object
+      Name: object
+      City: object
+      State Code: object
+      State: object
+      Zip Code: object
+      Country: object
+      Continent: object
+      Birthday: object
+
+  products:
+    primary_key:
+      - ProductKey
+    required_columns:
+      - ProductKey
+      - Product_Name
+      - Brand
+      - Color
+      - Unit_Cost_USD
+      - Unit_Price_USD
+      - SubcategoryKey
+      - Subcategory
+      - CategoryKey
+      - Category
+    dtypes:
+      ProductKey: int
+      Product Name: object
+      Brand: object
+      Color: object
+      Unit Cost USD: float
+      Unit Price USD: float
+      SubcategoryKey: int
+      Subcategory: object
+      CategoryKey: int
+      Category: object
+
+  stores:
+    primary_key:
+      - StoreKey
+    required_columns:
+      - StoreKey
+      - Country
+      - State
+      - Square_Meters
+      - Open_Date
+    dtypes:
+      StoreKey: int
+      Country: object
+      State: object
+      Square Meters: float
+      Open Date: date
+
+  exchangerates:
+    primary_key:
+      - Rate_Date
+      - Currency
+    required_columns:
+      - Rate_Date
+      - Currency
+      - Exchange
+    dtypes:
+      Date: date
+      Currency: object
+      Exchange: float
