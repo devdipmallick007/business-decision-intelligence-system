@@ -1,0 +1,14 @@
+stores:
+  primary_key:
+    - StoreKey
+  columns:
+    StoreKey:
+      type: int
+    Country:
+      type: string
+    State:
+      type: string
+    Square_Meters:
+      type: int
+    Open_Date:
+      type: date

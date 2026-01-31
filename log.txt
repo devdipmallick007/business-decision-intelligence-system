@@ -1,0 +1,689 @@
+2026-01-31 23:09:34,416 | INFO | project_logger | ===== Business Decision Intelligence System Started =====
+2026-01-31 23:09:34,513 | INFO | project_logger | Database engine created successfully
+2026-01-31 23:09:34,730 | INFO | project_logger | Found 5 tables in schema 'salesdata'
+2026-01-31 23:09:34,920 | INFO | project_logger | Fetched table 'customers' with 15266 rows and 10 columns
+2026-01-31 23:09:34,920 | INFO | project_logger | Columns in 'customers': ['CustomerKey', 'Gender', 'Name', 'City', 'State_Code', 'State', 'Zip_Code', 'Country', 'Continent', 'Birthday']
+2026-01-31 23:09:35,005 | INFO | project_logger | Fetched table 'exchangerates' with 11215 rows and 3 columns
+2026-01-31 23:09:35,006 | INFO | project_logger | Columns in 'exchangerates': ['Rate_Date', 'Currency', 'Exchange']
+2026-01-31 23:09:35,040 | INFO | project_logger | Fetched table 'products' with 2517 rows and 10 columns
+2026-01-31 23:09:35,040 | INFO | project_logger | Columns in 'products': ['ProductKey', 'Product_Name', 'Brand', 'Color', 'Unit_Cost_USD', 'Unit_Price_USD', 'SubcategoryKey', 'Subcategory', 'CategoryKey', 'Category']
+2026-01-31 23:09:35,749 | INFO | project_logger | Fetched table 'sales' with 62884 rows and 9 columns
+2026-01-31 23:09:35,749 | INFO | project_logger | Columns in 'sales': ['Order_Number', 'Line_Item', 'Order_Date', 'Delivery_Date', 'CustomerKey', 'StoreKey', 'ProductKey', 'Quantity', 'Currency_Code']
+2026-01-31 23:09:35,756 | INFO | project_logger | Fetched table 'stores' with 67 rows and 5 columns
+2026-01-31 23:09:35,757 | INFO | project_logger | Columns in 'stores': ['StoreKey', 'Country', 'State', 'Square_Meters', 'Open_Date']
+2026-01-31 23:09:35,757 | INFO | project_logger | Successfully fetched all tables: ['customers', 'exchangerates', 'products', 'sales', 'stores']
+2026-01-31 23:09:35,758 | INFO | project_logger | ===== DATA FETCH SUMMARY =====
+2026-01-31 23:09:35,758 | INFO | project_logger | Table 'customers' | Rows: 15266 | Columns: 10
+2026-01-31 23:09:35,758 | INFO | project_logger | Table 'exchangerates' | Rows: 11215 | Columns: 3
+2026-01-31 23:09:35,758 | INFO | project_logger | Table 'products' | Rows: 2517 | Columns: 10
+2026-01-31 23:09:35,758 | INFO | project_logger | Table 'sales' | Rows: 62884 | Columns: 9
+2026-01-31 23:09:35,759 | INFO | project_logger | Table 'stores' | Rows: 67 | Columns: 5
+2026-01-31 23:09:35,759 | INFO | project_logger | Loading schema from D:\business-decision-intelligence-system\schema\schema.yml
+2026-01-31 23:09:35,765 | INFO | project_logger | Schema loaded successfully
+2026-01-31 23:09:35,765 | INFO | project_logger | Checking table: customers
+2026-01-31 23:09:35,766 | INFO | project_logger | Starting validation for table: customers
+2026-01-31 23:09:35,766 | INFO | project_logger | [customers] Validating required columns...
+2026-01-31 23:09:35,767 | INFO | project_logger | [customers] Required columns validation passed
+2026-01-31 23:09:35,767 | INFO | project_logger | [customers] Validating primary key: ['CustomerKey']...
+2026-01-31 23:09:35,768 | INFO | project_logger | [customers] Primary key validation passed
+2026-01-31 23:09:35,768 | INFO | project_logger | [customers] Validating column data types...
+2026-01-31 23:09:35,769 | INFO | project_logger | [customers] Column CustomerKey dtype validation passed
+2026-01-31 23:09:35,769 | WARNING | project_logger | [customers] Unknown dtype object for column Gender, skipping
+2026-01-31 23:09:35,769 | INFO | project_logger | [customers] Column Gender dtype validation passed
+2026-01-31 23:09:35,769 | WARNING | project_logger | [customers] Unknown dtype object for column Name, skipping
+2026-01-31 23:09:35,770 | INFO | project_logger | [customers] Column Name dtype validation passed
+2026-01-31 23:09:35,770 | WARNING | project_logger | [customers] Unknown dtype object for column City, skipping
+2026-01-31 23:09:35,770 | INFO | project_logger | [customers] Column City dtype validation passed
+2026-01-31 23:09:35,770 | WARNING | project_logger | [customers] Column State Code not found for dtype validation, skipping
+2026-01-31 23:09:35,771 | WARNING | project_logger | [customers] Unknown dtype object for column State, skipping
+2026-01-31 23:09:35,771 | INFO | project_logger | [customers] Column State dtype validation passed
+2026-01-31 23:09:35,771 | WARNING | project_logger | [customers] Column Zip Code not found for dtype validation, skipping
+2026-01-31 23:09:35,771 | WARNING | project_logger | [customers] Unknown dtype object for column Country, skipping
+2026-01-31 23:09:35,772 | INFO | project_logger | [customers] Column Country dtype validation passed
+2026-01-31 23:09:35,772 | WARNING | project_logger | [customers] Unknown dtype object for column Continent, skipping
+2026-01-31 23:09:35,772 | INFO | project_logger | [customers] Column Continent dtype validation passed
+2026-01-31 23:09:35,772 | WARNING | project_logger | [customers] Unknown dtype object for column Birthday, skipping
+2026-01-31 23:09:35,773 | INFO | project_logger | [customers] Column Birthday dtype validation passed
+2026-01-31 23:09:35,773 | INFO | project_logger | Completed validation for table: customers
+2026-01-31 23:09:35,773 | INFO | project_logger | Checking table: exchangerates
+2026-01-31 23:09:35,773 | INFO | project_logger | Starting validation for table: exchangerates
+2026-01-31 23:09:35,774 | INFO | project_logger | [exchangerates] Validating required columns...
+2026-01-31 23:09:35,774 | INFO | project_logger | [exchangerates] Required columns validation passed
+2026-01-31 23:09:35,774 | INFO | project_logger | [exchangerates] Validating primary key: ['Rate_Date', 'Currency']...
+2026-01-31 23:09:35,777 | INFO | project_logger | [exchangerates] Primary key validation passed
+2026-01-31 23:09:35,778 | INFO | project_logger | [exchangerates] Validating column data types...
+2026-01-31 23:09:35,778 | WARNING | project_logger | [exchangerates] Column Date not found for dtype validation, skipping
+2026-01-31 23:09:35,779 | WARNING | project_logger | [exchangerates] Unknown dtype object for column Currency, skipping
+2026-01-31 23:09:35,779 | INFO | project_logger | [exchangerates] Column Currency dtype validation passed
+2026-01-31 23:09:35,779 | INFO | project_logger | [exchangerates] Column Exchange dtype validation passed
+2026-01-31 23:09:35,779 | INFO | project_logger | Completed validation for table: exchangerates
+2026-01-31 23:09:35,779 | INFO | project_logger | Checking table: products
+2026-01-31 23:09:35,780 | INFO | project_logger | Starting validation for table: products
+2026-01-31 23:09:35,780 | INFO | project_logger | [products] Validating required columns...
+2026-01-31 23:09:35,780 | INFO | project_logger | [products] Required columns validation passed
+2026-01-31 23:09:35,780 | INFO | project_logger | [products] Validating primary key: ['ProductKey']...
+2026-01-31 23:09:35,781 | INFO | project_logger | [products] Primary key validation passed
+2026-01-31 23:09:35,781 | INFO | project_logger | [products] Validating column data types...
+2026-01-31 23:09:35,781 | INFO | project_logger | [products] Column ProductKey dtype validation passed
+2026-01-31 23:09:35,782 | WARNING | project_logger | [products] Column Product Name not found for dtype validation, skipping
+2026-01-31 23:09:35,782 | WARNING | project_logger | [products] Unknown dtype object for column Brand, skipping
+2026-01-31 23:09:35,782 | INFO | project_logger | [products] Column Brand dtype validation passed
+2026-01-31 23:09:35,782 | WARNING | project_logger | [products] Unknown dtype object for column Color, skipping
+2026-01-31 23:09:35,783 | INFO | project_logger | [products] Column Color dtype validation passed
+2026-01-31 23:09:35,783 | WARNING | project_logger | [products] Column Unit Cost USD not found for dtype validation, skipping
+2026-01-31 23:09:35,783 | WARNING | project_logger | [products] Column Unit Price USD not found for dtype validation, skipping
+2026-01-31 23:09:35,783 | INFO | project_logger | [products] Column SubcategoryKey dtype validation passed
+2026-01-31 23:09:35,783 | WARNING | project_logger | [products] Unknown dtype object for column Subcategory, skipping
+2026-01-31 23:09:35,784 | INFO | project_logger | [products] Column Subcategory dtype validation passed
+2026-01-31 23:09:35,784 | INFO | project_logger | [products] Column CategoryKey dtype validation passed
+2026-01-31 23:09:35,784 | WARNING | project_logger | [products] Unknown dtype object for column Category, skipping
+2026-01-31 23:09:35,784 | INFO | project_logger | [products] Column Category dtype validation passed
+2026-01-31 23:09:35,784 | INFO | project_logger | Completed validation for table: products
+2026-01-31 23:09:35,784 | INFO | project_logger | Checking table: sales
+2026-01-31 23:09:35,784 | INFO | project_logger | Starting validation for table: sales
+2026-01-31 23:09:35,785 | INFO | project_logger | [sales] Validating required columns...
+2026-01-31 23:09:35,785 | INFO | project_logger | [sales] Required columns validation passed
+2026-01-31 23:09:35,785 | INFO | project_logger | [sales] Validating primary key: ['Order_Number', 'Line_Item']...
+2026-01-31 23:09:35,792 | INFO | project_logger | [sales] Primary key validation passed
+2026-01-31 23:09:35,792 | INFO | project_logger | [sales] Validating column data types...
+2026-01-31 23:09:35,793 | WARNING | project_logger | [sales] Column Order Number not found for dtype validation, skipping
+2026-01-31 23:09:35,793 | WARNING | project_logger | [sales] Column Line Item not found for dtype validation, skipping
+2026-01-31 23:09:35,793 | WARNING | project_logger | [sales] Column Order Date not found for dtype validation, skipping
+2026-01-31 23:09:35,793 | WARNING | project_logger | [sales] Column Delivery Date not found for dtype validation, skipping
+2026-01-31 23:09:35,794 | INFO | project_logger | [sales] Column CustomerKey dtype validation passed
+2026-01-31 23:09:35,794 | INFO | project_logger | [sales] Column StoreKey dtype validation passed
+2026-01-31 23:09:35,794 | INFO | project_logger | [sales] Column ProductKey dtype validation passed
+2026-01-31 23:09:35,794 | INFO | project_logger | [sales] Column Quantity dtype validation passed
+2026-01-31 23:09:35,794 | WARNING | project_logger | [sales] Column Currency Code not found for dtype validation, skipping
+2026-01-31 23:09:35,795 | INFO | project_logger | Completed validation for table: sales
+2026-01-31 23:09:35,795 | INFO | project_logger | Checking table: stores
+2026-01-31 23:09:35,795 | INFO | project_logger | Starting validation for table: stores
+2026-01-31 23:09:35,795 | INFO | project_logger | [stores] Validating required columns...
+2026-01-31 23:09:35,795 | INFO | project_logger | [stores] Required columns validation passed
+2026-01-31 23:09:35,795 | INFO | project_logger | [stores] Validating primary key: ['StoreKey']...
+2026-01-31 23:09:35,796 | INFO | project_logger | [stores] Primary key validation passed
+2026-01-31 23:09:35,796 | INFO | project_logger | [stores] Validating column data types...
+2026-01-31 23:09:35,796 | INFO | project_logger | [stores] Column StoreKey dtype validation passed
+2026-01-31 23:09:35,796 | WARNING | project_logger | [stores] Unknown dtype object for column Country, skipping
+2026-01-31 23:09:35,796 | INFO | project_logger | [stores] Column Country dtype validation passed
+2026-01-31 23:09:35,796 | WARNING | project_logger | [stores] Unknown dtype object for column State, skipping
+2026-01-31 23:09:35,796 | INFO | project_logger | [stores] Column State dtype validation passed
+2026-01-31 23:09:35,797 | WARNING | project_logger | [stores] Column Square Meters not found for dtype validation, skipping
+2026-01-31 23:09:35,797 | WARNING | project_logger | [stores] Column Open Date not found for dtype validation, skipping
+2026-01-31 23:09:35,797 | INFO | project_logger | Completed validation for table: stores
+2026-01-31 23:09:35,797 | INFO | project_logger |  Schema validation passed for all tables
+2026-01-31 23:09:36,023 | INFO | project_logger | ===== Pipeline Finished Successfully =====
+2026-01-31 23:09:43,815 | INFO | project_logger | Starting cleaning for table: customers
+2026-01-31 23:09:43,878 | INFO | project_logger | --- AUDIT [RAW] ---
+2026-01-31 23:09:43,879 | INFO | project_logger | Shape: (15266, 10)
+2026-01-31 23:09:43,885 | INFO | project_logger | Nulls:
+CustomerKey     0
+Gender          0
+Name            0
+City            0
+State_Code     10
+State           0
+Zip_Code        0
+Country         0
+Continent       0
+Birthday        0
+dtype: int64
+2026-01-31 23:09:43,897 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:43,913 | INFO | project_logger | Unique values per column:
+CustomerKey    15266
+Gender             2
+Name           15118
+City            8258
+State_Code       467
+State            512
+Zip_Code        9505
+Country            8
+Continent          3
+Birthday       11270
+dtype: int64
+2026-01-31 23:09:43,915 | INFO | project_logger | Column datatypes:
+CustomerKey     int64
+Gender         object
+Name           object
+City           object
+State_Code     object
+State          object
+Zip_Code       object
+Country        object
+Continent      object
+Birthday       object
+dtype: object
+2026-01-31 23:09:43,915 | INFO | project_logger | ----------------------
+2026-01-31 23:09:43,915 | INFO | project_logger | Loading schema for table 'customers' from D:\business-decision-intelligence-system\schema\customer_schema.yml
+2026-01-31 23:09:43,918 | INFO | project_logger | Standardizing table (schema + datatypes)
+2026-01-31 23:09:43,918 | INFO | project_logger | Canonicalizing column names
+2026-01-31 23:09:43,976 | INFO | project_logger | --- AUDIT [STANDARDIZED] ---
+2026-01-31 23:09:43,976 | INFO | project_logger | Shape: (15266, 10)
+2026-01-31 23:09:43,981 | INFO | project_logger | Nulls:
+customerkey     0
+gender          0
+name            0
+city            0
+state_code     10
+state           0
+zip_code        0
+country         0
+continent       0
+birthday        0
+dtype: int64
+2026-01-31 23:09:43,998 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,006 | INFO | project_logger | Unique values per column:
+customerkey    15266
+gender             2
+name           15118
+city            8258
+state_code       467
+state            512
+zip_code        9505
+country            8
+continent          3
+birthday       11270
+dtype: int64
+2026-01-31 23:09:44,008 | INFO | project_logger | Column datatypes:
+customerkey             int64
+gender         string[python]
+name           string[python]
+city           string[python]
+state_code     string[python]
+state          string[python]
+zip_code       string[python]
+country        string[python]
+continent      string[python]
+birthday       datetime64[ns]
+dtype: object
+2026-01-31 23:09:44,008 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,083 | INFO | project_logger | Applying business rules
+2026-01-31 23:09:44,127 | INFO | project_logger | Cleaning completed. Dropped rows: 0
+2026-01-31 23:09:44,185 | INFO | project_logger | --- AUDIT [CLEANED] ---
+2026-01-31 23:09:44,185 | INFO | project_logger | Shape: (15266, 11)
+2026-01-31 23:09:44,190 | INFO | project_logger | Nulls:
+customerkey          0
+gender               0
+name                 0
+city                 0
+state_code          10
+state                0
+zip_code             0
+country              0
+continent            0
+birthday             0
+birthday_flagged     0
+dtype: int64
+2026-01-31 23:09:44,208 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,218 | INFO | project_logger | Unique values per column:
+customerkey         15266
+gender                  2
+name                15118
+city                 8258
+state_code            467
+state                 512
+zip_code             9505
+country                 8
+continent               3
+birthday            11270
+birthday_flagged        1
+dtype: int64
+2026-01-31 23:09:44,219 | INFO | project_logger | Column datatypes:
+customerkey                  int64
+gender              string[python]
+name                string[python]
+city                string[python]
+state_code          string[python]
+state               string[python]
+zip_code            string[python]
+country             string[python]
+continent           string[python]
+birthday            datetime64[ns]
+birthday_flagged              bool
+dtype: object
+2026-01-31 23:09:44,220 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,220 | INFO | project_logger | --- CHANGE LOG ---
+2026-01-31 23:09:44,220 | INFO | project_logger | Rows before: 15266
+2026-01-31 23:09:44,221 | INFO | project_logger | Rows after : 15266
+2026-01-31 23:09:44,221 | INFO | project_logger | ------------------
+2026-01-31 23:09:44,221 | INFO | project_logger | Customer cleaning pipeline completed successfully.
+2026-01-31 23:09:44,223 | INFO | project_logger | Starting cleaning for table: products
+2026-01-31 23:09:44,266 | INFO | project_logger | --- AUDIT [RAW] ---
+2026-01-31 23:09:44,266 | INFO | project_logger | Shape: (2517, 10)
+2026-01-31 23:09:44,268 | INFO | project_logger | Nulls:
+ProductKey        0
+Product_Name      0
+Brand             0
+Color             0
+Unit_Cost_USD     0
+Unit_Price_USD    0
+SubcategoryKey    0
+Subcategory       0
+CategoryKey       0
+Category          0
+dtype: int64
+2026-01-31 23:09:44,271 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,275 | INFO | project_logger | Unique values per column:
+ProductKey        2517
+Product_Name      2517
+Brand               11
+Color               16
+Unit_Cost_USD      480
+Unit_Price_USD     426
+SubcategoryKey      32
+Subcategory         32
+CategoryKey          8
+Category             8
+dtype: int64
+2026-01-31 23:09:44,277 | INFO | project_logger | Column datatypes:
+ProductKey          int64
+Product_Name       object
+Brand              object
+Color              object
+Unit_Cost_USD     float64
+Unit_Price_USD    float64
+SubcategoryKey      int64
+Subcategory        object
+CategoryKey         int64
+Category           object
+dtype: object
+2026-01-31 23:09:44,277 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,277 | INFO | project_logger | Loading schema for table 'products' from D:\business-decision-intelligence-system\schema\products_schema.yml
+2026-01-31 23:09:44,280 | INFO | project_logger | Standardizing table (schema + datatypes)
+2026-01-31 23:09:44,280 | INFO | project_logger | Canonicalizing column names
+2026-01-31 23:09:44,285 | INFO | project_logger | --- AUDIT [STANDARDIZED] ---
+2026-01-31 23:09:44,286 | INFO | project_logger | Shape: (2517, 10)
+2026-01-31 23:09:44,287 | INFO | project_logger | Nulls:
+productkey        0
+product_name      0
+brand             0
+color             0
+unit_cost_usd     0
+unit_price_usd    0
+subcategorykey    0
+subcategory       0
+categorykey       0
+category          0
+dtype: int64
+2026-01-31 23:09:44,290 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,295 | INFO | project_logger | Unique values per column:
+productkey        2517
+product_name      2517
+brand               11
+color               16
+unit_cost_usd      480
+unit_price_usd     426
+subcategorykey      32
+subcategory         32
+categorykey          8
+category             8
+dtype: int64
+2026-01-31 23:09:44,296 | INFO | project_logger | Column datatypes:
+productkey                 int64
+product_name      string[python]
+brand             string[python]
+color             string[python]
+unit_cost_usd            float64
+unit_price_usd           float64
+subcategorykey             int64
+subcategory       string[python]
+categorykey                int64
+category          string[python]
+dtype: object
+2026-01-31 23:09:44,296 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,307 | INFO | project_logger | Applying business rules
+2026-01-31 23:09:44,316 | INFO | project_logger | Cleaning completed. Dropped rows: 0
+2026-01-31 23:09:44,330 | INFO | project_logger | --- AUDIT [CLEANED] ---
+2026-01-31 23:09:44,330 | INFO | project_logger | Shape: (2517, 13)
+2026-01-31 23:09:44,333 | INFO | project_logger | Nulls:
+productkey                0
+product_name              0
+brand                     0
+color                     0
+unit_cost_usd             0
+unit_price_usd            0
+subcategorykey            0
+subcategory               0
+categorykey               0
+category                  0
+unit_cost_flagged         0
+unit_price_flagged        0
+price_mismatch_flagged    0
+dtype: int64
+2026-01-31 23:09:44,336 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,340 | INFO | project_logger | Unique values per column:
+productkey                2517
+product_name              2517
+brand                       11
+color                       16
+unit_cost_usd              480
+unit_price_usd             426
+subcategorykey              32
+subcategory                 32
+categorykey                  8
+category                     8
+unit_cost_flagged            1
+unit_price_flagged           1
+price_mismatch_flagged       1
+dtype: int64
+2026-01-31 23:09:44,341 | INFO | project_logger | Column datatypes:
+productkey                         int64
+product_name              string[python]
+brand                     string[python]
+color                     string[python]
+unit_cost_usd                    float64
+unit_price_usd                   float64
+subcategorykey                     int64
+subcategory               string[python]
+categorykey                        int64
+category                  string[python]
+unit_cost_flagged                   bool
+unit_price_flagged                  bool
+price_mismatch_flagged              bool
+dtype: object
+2026-01-31 23:09:44,342 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,342 | INFO | project_logger | --- CHANGE LOG ---
+2026-01-31 23:09:44,343 | INFO | project_logger | Rows before: 2517
+2026-01-31 23:09:44,343 | INFO | project_logger | Rows after : 2517
+2026-01-31 23:09:44,343 | INFO | project_logger | ------------------
+2026-01-31 23:09:44,343 | INFO | project_logger | Products cleaning pipeline completed successfully.
+2026-01-31 23:09:44,344 | INFO | project_logger | Starting cleaning for table: stores
+2026-01-31 23:09:44,372 | INFO | project_logger | --- AUDIT [RAW] ---
+2026-01-31 23:09:44,373 | INFO | project_logger | Shape: (67, 5)
+2026-01-31 23:09:44,373 | INFO | project_logger | Nulls:
+StoreKey         0
+Country          0
+State            0
+Square_Meters    1
+Open_Date        0
+dtype: int64
+2026-01-31 23:09:44,375 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,376 | INFO | project_logger | Unique values per column:
+StoreKey         67
+Country           9
+State            67
+Square_Meters    36
+Open_Date        25
+dtype: int64
+2026-01-31 23:09:44,378 | INFO | project_logger | Column datatypes:
+StoreKey           int64
+Country           object
+State             object
+Square_Meters    float64
+Open_Date         object
+dtype: object
+2026-01-31 23:09:44,378 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,379 | INFO | project_logger | Loading schema for table 'stores' from D:\business-decision-intelligence-system\schema\stores_schema.yml
+2026-01-31 23:09:44,380 | INFO | project_logger | Standardizing table (schema + datatypes)
+2026-01-31 23:09:44,380 | INFO | project_logger | Canonicalizing column names
+2026-01-31 23:09:44,383 | INFO | project_logger | --- AUDIT [STANDARDIZED] ---
+2026-01-31 23:09:44,384 | INFO | project_logger | Shape: (67, 5)
+2026-01-31 23:09:44,386 | INFO | project_logger | Nulls:
+storekey         0
+country          0
+state            0
+square_meters    1
+open_date        0
+dtype: int64
+2026-01-31 23:09:44,386 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,387 | INFO | project_logger | Unique values per column:
+storekey         67
+country           9
+state            67
+square_meters    36
+open_date        25
+dtype: int64
+2026-01-31 23:09:44,388 | INFO | project_logger | Column datatypes:
+storekey                  int64
+country          string[python]
+state            string[python]
+square_meters           float64
+open_date        datetime64[ns]
+dtype: object
+2026-01-31 23:09:44,388 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,391 | INFO | project_logger | Applying business rules
+2026-01-31 23:09:44,396 | INFO | project_logger | Cleaning completed. Dropped rows: 0
+2026-01-31 23:09:44,397 | INFO | project_logger | --- AUDIT [CLEANED] ---
+2026-01-31 23:09:44,398 | INFO | project_logger | Shape: (67, 7)
+2026-01-31 23:09:44,399 | INFO | project_logger | Nulls:
+storekey                 0
+country                  0
+state                    0
+square_meters            0
+open_date                0
+square_meters_flagged    0
+open_date_flagged        0
+dtype: int64
+2026-01-31 23:09:44,401 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,402 | INFO | project_logger | Unique values per column:
+storekey                 67
+country                   9
+state                    67
+square_meters            37
+open_date                25
+square_meters_flagged     1
+open_date_flagged         1
+dtype: int64
+2026-01-31 23:09:44,402 | INFO | project_logger | Column datatypes:
+storekey                          int64
+country                  string[python]
+state                    string[python]
+square_meters                   float64
+open_date                datetime64[ns]
+square_meters_flagged              bool
+open_date_flagged                  bool
+dtype: object
+2026-01-31 23:09:44,403 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,403 | INFO | project_logger | --- CHANGE LOG ---
+2026-01-31 23:09:44,403 | INFO | project_logger | Rows before: 67
+2026-01-31 23:09:44,404 | INFO | project_logger | Rows after : 67
+2026-01-31 23:09:44,404 | INFO | project_logger | ------------------
+2026-01-31 23:09:44,404 | INFO | project_logger | Stores cleaning pipeline completed successfully.
+2026-01-31 23:09:44,405 | INFO | project_logger | Starting cleaning for table: sales
+2026-01-31 23:09:44,488 | INFO | project_logger | --- AUDIT [RAW] ---
+2026-01-31 23:09:44,488 | INFO | project_logger | Shape: (62884, 9)
+2026-01-31 23:09:44,495 | INFO | project_logger | Nulls:
+Order_Number         0
+Line_Item            0
+Order_Date           0
+Delivery_Date    49719
+CustomerKey          0
+StoreKey             0
+ProductKey           0
+Quantity             0
+Currency_Code        0
+dtype: int64
+2026-01-31 23:09:44,520 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,534 | INFO | project_logger | Unique values per column:
+Order_Number     26326
+Line_Item            7
+Order_Date        1641
+Delivery_Date     1492
+CustomerKey      11887
+StoreKey            58
+ProductKey        2492
+Quantity            10
+Currency_Code        5
+dtype: int64
+2026-01-31 23:09:44,535 | INFO | project_logger | Column datatypes:
+Order_Number      int64
+Line_Item         int64
+Order_Date       object
+Delivery_Date    object
+CustomerKey       int64
+StoreKey          int64
+ProductKey        int64
+Quantity          int64
+Currency_Code    object
+dtype: object
+2026-01-31 23:09:44,536 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,536 | INFO | project_logger | Loading schema for table 'sales' from D:\business-decision-intelligence-system\schema\sales_schema.yml
+2026-01-31 23:09:44,538 | INFO | project_logger | Standardizing table (schema + datatypes)
+2026-01-31 23:09:44,539 | INFO | project_logger | Canonicalizing column names
+2026-01-31 23:09:44,570 | INFO | project_logger | --- AUDIT [STANDARDIZED] ---
+2026-01-31 23:09:44,571 | INFO | project_logger | Shape: (62884, 9)
+2026-01-31 23:09:44,575 | INFO | project_logger | Nulls:
+order_number         0
+line_item            0
+order_date           0
+delivery_date    49719
+customerkey          0
+storekey             0
+productkey           0
+quantity             0
+currency_code        0
+dtype: int64
+2026-01-31 23:09:44,598 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:44,609 | INFO | project_logger | Unique values per column:
+order_number     26326
+line_item            7
+order_date        1641
+delivery_date     1492
+customerkey      11887
+storekey            58
+productkey        2492
+quantity            10
+currency_code        5
+dtype: int64
+2026-01-31 23:09:44,610 | INFO | project_logger | Column datatypes:
+order_number              int64
+line_item                 int64
+order_date       datetime64[ns]
+delivery_date    datetime64[ns]
+customerkey               int64
+storekey                  int64
+productkey                int64
+quantity                  int64
+currency_code    string[python]
+dtype: object
+2026-01-31 23:09:44,610 | INFO | project_logger | ----------------------
+2026-01-31 23:09:44,850 | INFO | project_logger | Applying business rules
+2026-01-31 23:09:44,925 | INFO | project_logger | Cleaning completed. Dropped rows: 0
+2026-01-31 23:09:45,199 | INFO | project_logger | --- AUDIT [CLEANED] ---
+2026-01-31 23:09:45,199 | INFO | project_logger | Shape: (62884, 15)
+2026-01-31 23:09:45,204 | INFO | project_logger | Nulls:
+order_number           0
+line_item              0
+order_date             0
+delivery_date          0
+customerkey            0
+storekey               0
+productkey             0
+quantity               0
+currency_code          0
+quantity_flagged       0
+order_date_flagged     0
+delivery_flagged       0
+customerkey_flagged    0
+storekey_flagged       0
+productkey_flagged     0
+dtype: int64
+2026-01-31 23:09:45,230 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:45,241 | INFO | project_logger | Unique values per column:
+order_number           26326
+line_item                  7
+order_date              1641
+delivery_date           1492
+customerkey            11887
+storekey                  58
+productkey              2492
+quantity                  10
+currency_code              5
+quantity_flagged           1
+order_date_flagged         1
+delivery_flagged           2
+customerkey_flagged        1
+storekey_flagged           1
+productkey_flagged         1
+dtype: int64
+2026-01-31 23:09:45,243 | INFO | project_logger | Column datatypes:
+order_number                    int64
+line_item                       int64
+order_date             datetime64[ns]
+delivery_date          datetime64[ns]
+customerkey                     int64
+storekey                        int64
+productkey                      int64
+quantity                        int64
+currency_code          string[python]
+quantity_flagged                 bool
+order_date_flagged               bool
+delivery_flagged                 bool
+customerkey_flagged              bool
+storekey_flagged                 bool
+productkey_flagged               bool
+dtype: object
+2026-01-31 23:09:45,243 | INFO | project_logger | ----------------------
+2026-01-31 23:09:45,244 | INFO | project_logger | --- CHANGE LOG ---
+2026-01-31 23:09:45,244 | INFO | project_logger | Rows before: 62884
+2026-01-31 23:09:45,244 | INFO | project_logger | Rows after : 62884
+2026-01-31 23:09:45,244 | INFO | project_logger | ------------------
+2026-01-31 23:09:45,244 | INFO | project_logger | Sales cleaning pipeline completed successfully.
+2026-01-31 23:09:45,247 | INFO | project_logger | Starting cleaning for table: exchangerates
+2026-01-31 23:09:45,291 | INFO | project_logger | --- AUDIT [RAW] ---
+2026-01-31 23:09:45,292 | INFO | project_logger | Shape: (11215, 3)
+2026-01-31 23:09:45,294 | INFO | project_logger | Nulls:
+Rate_Date    0
+Currency     0
+Exchange     0
+dtype: int64
+2026-01-31 23:09:45,296 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:45,300 | INFO | project_logger | Unique values per column:
+Rate_Date    2243
+Currency        5
+Exchange     3473
+dtype: int64
+2026-01-31 23:09:45,301 | INFO | project_logger | Column datatypes:
+Rate_Date     object
+Currency      object
+Exchange     float64
+dtype: object
+2026-01-31 23:09:45,301 | INFO | project_logger | ----------------------
+2026-01-31 23:09:45,301 | INFO | project_logger | Loading schema for table 'exchangerates' from D:\business-decision-intelligence-system\schema\exchange_rate_schema.yml
+2026-01-31 23:09:45,303 | INFO | project_logger | Standardizing table (schema + datatypes)
+2026-01-31 23:09:45,304 | INFO | project_logger | Canonicalizing column names
+2026-01-31 23:09:45,313 | INFO | project_logger | --- AUDIT [STANDARDIZED] ---
+2026-01-31 23:09:45,313 | INFO | project_logger | Shape: (11215, 3)
+2026-01-31 23:09:45,315 | INFO | project_logger | Nulls:
+rate_date    0
+currency     0
+exchange     0
+dtype: int64
+2026-01-31 23:09:45,318 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:45,321 | INFO | project_logger | Unique values per column:
+rate_date    2243
+currency        5
+exchange     3473
+dtype: int64
+2026-01-31 23:09:45,322 | INFO | project_logger | Column datatypes:
+rate_date    datetime64[ns]
+currency     string[python]
+exchange            float64
+dtype: object
+2026-01-31 23:09:45,322 | INFO | project_logger | ----------------------
+2026-01-31 23:09:45,345 | INFO | project_logger | Applying business rules
+2026-01-31 23:09:45,349 | INFO | project_logger | Cleaning completed. Dropped rows: 0
+2026-01-31 23:09:45,370 | INFO | project_logger | --- AUDIT [CLEANED] ---
+2026-01-31 23:09:45,371 | INFO | project_logger | Shape: (11215, 3)
+2026-01-31 23:09:45,372 | INFO | project_logger | Nulls:
+rate_date    0
+currency     0
+exchange     0
+dtype: int64
+2026-01-31 23:09:45,375 | INFO | project_logger | Duplicate rows: 0
+2026-01-31 23:09:45,379 | INFO | project_logger | Unique values per column:
+rate_date    2243
+currency        5
+exchange     3473
+dtype: int64
+2026-01-31 23:09:45,380 | INFO | project_logger | Column datatypes:
+rate_date    datetime64[ns]
+currency     string[python]
+exchange            float64
+dtype: object
+2026-01-31 23:09:45,380 | INFO | project_logger | ----------------------
+2026-01-31 23:09:45,380 | INFO | project_logger | --- CHANGE LOG ---
+2026-01-31 23:09:45,380 | INFO | project_logger | Rows before: 11215
+2026-01-31 23:09:45,381 | INFO | project_logger | Rows after : 11215
+2026-01-31 23:09:45,381 | INFO | project_logger | ------------------
+2026-01-31 23:09:45,381 | INFO | project_logger | Exchange rates cleaning pipeline completed successfully.

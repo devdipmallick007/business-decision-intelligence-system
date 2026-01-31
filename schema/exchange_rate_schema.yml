@@ -1,0 +1,9 @@
+exchangerates:
+  primary_key: ["Rate_Date", "Currency"]
+  columns:
+    Rate_Date:
+      type: date
+    Currency:
+      type: string
+    Exchange:
+      type: float

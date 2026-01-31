@@ -1,0 +1,54 @@
+[ MySQL (Source Systems) ]
+        |
+        v
+[ Raw Data Snapshot ]
+  - exact copy
+  - immutable
+        |
+        v
+[ Schema Validation Layer ]
+  - column checks
+  - type checks
+  - null rules
+        |
+        v
+[ Table-Level Cleaning Layer ]
+  - each table separate
+  - no joins
+  - no features
+        |
+        v
+[ Schema Fixing & Standardization ]
+  - enforce types
+  - normalize time
+  - stable keys
+        |
+        v
+[ Integrated Analytical Layer ]
+  - joins
+  - time alignment
+  - business views
+        |
+        v
+[ Causal Intelligence Layer ]
+  - define action
+  - define outcome
+  - control confounders
+  - estimate effects
+        |
+        v
+[ Decision Logic Layer ]
+  - rules
+  - thresholds
+  - trade-offs
+        |
+        v
+[ Human Interface ]
+  - dashboards
+  - what-if views
+        |
+        v
+[ Automation & Governance ]
+  - scheduling
+  - monitoring
+  - audit logs
