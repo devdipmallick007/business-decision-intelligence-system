@@ -1,0 +1,34 @@
+products:
+  primary_key:
+    - ProductKey
+  columns:
+    ProductKey:
+      type: int
+      required: true
+    Product_Name:
+      type: string
+      required: true
+    Brand:
+      type: string
+      required: true
+    Color:
+      type: string
+      required: false
+    Unit_Cost_USD:
+      type: float
+      required: true
+    Unit_Price_USD:
+      type: float
+      required: true
+    SubcategoryKey:
+      type: int
+      required: true
+    Subcategory:
+      type: string
+      required: true
+    CategoryKey:
+      type: int
+      required: true
+    Category:
+      type: string
+      required: true

@@ -1,0 +1,27 @@
+customers:
+  primary_key:
+    - CustomerKey
+  columns:
+    CustomerKey:
+      type: int
+    Gender:
+      type: string
+      allowed_values: [M, F]
+    Name:
+      type: string
+    City:
+      type: string
+    State_Code:
+      type: string
+    State:
+      type: string
+    Zip_Code:
+      type: string
+      max_length: 10
+    Country:
+      type: string
+    Continent:
+      type: string
+    Birthday:
+      type: date
+      min_years_ago: 18

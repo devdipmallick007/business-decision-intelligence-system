@@ -1,0 +1,30 @@
+sales:
+  primary_key:
+    - Order_Number
+    - Line_Item
+  columns:
+    Order_Number:
+      type: int
+    Line_Item:
+      type: int
+    Order_Date:
+      type: date
+    Delivery_Date:
+      type: date
+    CustomerKey:
+      type: int
+    StoreKey:
+      type: int
+    ProductKey:
+      type: int
+    Quantity:
+      type: int
+      min_value: 1
+    Currency_Code:
+      type: string
+      allowed_values:
+        - USD
+        - EUR
+        - GBP
+        - INR
+        - JPY
