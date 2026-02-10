@@ -8,13 +8,18 @@ __pycache__/
 # Logs
 logs/
 *.log
+log.txt
 
 # Environment variables
 .env
 
-# Data artifacts
-data/raw/
-data/cleaned/
+# Data artifacts (generated, never commit)
+data/analytical/*.csv
+data/business/*.csv
+data/state/*.csv
+
+# Notebooks
+.ipynb_checkpoints/
 
 # IDE
 .vscode/

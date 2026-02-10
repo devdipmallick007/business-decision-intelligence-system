@@ -52,3 +52,30 @@
   - scheduling
   - monitoring
   - audit logs
+
+
+
+┌──────────────────────────────────────────┐
+│        Business Decision Interface       │
+│ (What-if queries, dashboards, scenarios) │
+└──────────────────────────────────────────┘
+                    ↓
+┌──────────────────────────────────────────┐
+│        Orchestration & Control Layer     │
+│ (Scenario manager, agent coordinator)   │
+└──────────────────────────────────────────┘
+                    ↓
+┌──────────────────────────────────────────┐
+│     Multi-Agent Simulation Layer         │
+│ (Pricing, Customer, Store, Product...)  │
+└──────────────────────────────────────────┘
+                    ↓
+┌──────────────────────────────────────────┐
+│        Causal World Model Layer          │
+│ (SCM, DAGs, interventions, counterf.)   │
+└──────────────────────────────────────────┘
+                    ↓
+┌──────────────────────────────────────────┐
+│       Data & Reality Grounding Layer     │
+│ (Historical data, features, constraints)│
+└──────────────────────────────────────────┘

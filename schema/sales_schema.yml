@@ -2,26 +2,68 @@ sales:
   primary_key:
     - Order_Number
     - Line_Item
+
   columns:
+
     Order_Number:
       type: int
+      required: true
+      nullable: false
+      role: natural
+
     Line_Item:
       type: int
+      required: true
+      nullable: false
+      role: natural
+
     Order_Date:
       type: date
+      required: true
+      nullable: false
+      role: natural
+
     Delivery_Date:
       type: date
+      required: true
+      nullable: true              # 👈 allowed early
+      role: derived               # 👈 KEY FIX
+      derive_from: Order_Date
+      derivation_rule: same_day_if_missing
+
     CustomerKey:
       type: int
+      required: true
+      nullable: false
+      role: foreign_key
+      references: customers.customerkey
+
     StoreKey:
       type: int
+      required: true
+      nullable: false
+      role: foreign_key
+      references: stores.storekey
+
     ProductKey:
       type: int
+      required: true
+      nullable: false
+      role: foreign_key
+      references: products.productkey
+
     Quantity:
       type: int
+      required: true
+      nullable: false
+      role: measure
       min_value: 1
+
     Currency_Code:
       type: string
+      required: true
+      nullable: false
+      role: dimension
       allowed_values:
         - USD
         - EUR

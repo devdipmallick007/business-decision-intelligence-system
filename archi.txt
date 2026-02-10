@@ -1,0 +1,46 @@
+[ MySQL (Source Systems) ]
+        ↓
+[ Raw Data Snapshot ]
+        ↓
+[ Schema Validation Layer ]
+        ↓
+[ Table-Level Cleaning Layer ]
+        ↓
+[ Schema Fixing & Standardization ]
+        ↓
+[ Integrated Analytical Layer ]
+        ↓
+[ Business State & Context Store ]
+        ↓
+[ Causal Estimation Layer ]
+  - DAGs
+  - SCMs
+  - Effect sizes
+        ↓
+[ Counterfactual Simulation Engine ]
+        ↓
+┌──────────────────────────────────────┐
+│        Multi-Agent Simulation        │
+│  (Pricing, Customer, Store Agents)   │
+└──────────────────────────────────────┘
+        ↓
+┌──────────────────────────────────────┐
+│        Agent Orchestration Layer     │
+│  - turn control                     │
+│  - permissions                      │
+│  - safety rules                     │
+└──────────────────────────────────────┘
+        ↓
+┌──────────────────────────────────────┐
+│      GenAI Cognitive Agent Layer     │
+│  - Strategy Agent                   │
+│  - Risk Agent                       │
+│  - Scenario Agent                   │
+│  - Explainer Agent                  │
+└──────────────────────────────────────┘
+        ↓
+[ Decision Logic Layer ]
+        ↓
+[ Human Interface ]
+        ↓
+[ Automation & Governance ]
