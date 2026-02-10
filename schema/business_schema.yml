@@ -1,0 +1,35 @@
+business_fact:
+  columns:
+    - name: order_number
+      type: int
+      nullable: false
+    - name: order_date
+      type: date
+      nullable: false
+    - name: store_id
+      type: int
+      nullable: false
+    - name: product_id
+      type: int
+      nullable: false
+    - name: sales_amount
+      type: float
+      nullable: false
+    - name: quantity
+      type: int
+      nullable: false
+    - name: revenue_local
+      type: float
+      nullable: true
+    - name: revenue_usd
+      type: float
+      nullable: true
+    - name: metric_1
+      type: float
+      nullable: true
+    - name: metric_2
+      type: float
+      nullable: true
+    - name: state_snapshot
+      type: str
+      nullable: true

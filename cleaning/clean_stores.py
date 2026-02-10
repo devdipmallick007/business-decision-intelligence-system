@@ -118,7 +118,7 @@ def main():
     df_clean = clean_table(df_std, schema)
     df_clean.to_csv(clean_file, index=False)
     audit_data(df_clean, "CLEANED")
-    log_changes(df_raw, df_clean)
+    log_changes(df_raw, df_clean,stage='STORE_CLEANING')
 
     logger.info(f"Stores cleaning pipeline completed successfully.")
 
